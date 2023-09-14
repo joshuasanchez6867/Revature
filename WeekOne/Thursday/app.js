@@ -1,8 +1,21 @@
 const http = require("http");
-const url = require('node:url');
-const PORT = 8080;
+const { createLogger, transports, format} = require('winston');
 
+const PORT = 8080;
+const logger = createLogger({
+    level: 'info', // this will log only messages with the level 'info' and above
+    format: format.combine(
+        format.timestamp(),
+        format.printf(({timestamp, level, message}) => {
+            return `${timestamp} [${level}]: ${message}`;
+        })
+    ),
+    transports: [
+        new transports.File({ filename: 'app.log'}), // log to a file
+    ]
+})
 let grocery_list = [];
+logger.info("New Session");
 
 function makeItem(name, price, quantity, purchased){
     return {name: `${name}`,
@@ -22,6 +35,8 @@ const server = http.createServer((req, res) => {
             quantity: `${item.quantity}`,
             purchased: `${item.purchased}`})
         })
+        logger.info('Return all items for GET request}');
+
         res.end(`list: ${JSON.stringify(data)}`);
     //POST
     }else if(req.method === 'POST'){//add to grocery list
@@ -29,12 +44,13 @@ const server = http.createServer((req, res) => {
         req.on('data', (chunk) => {
             body += chunk;
         });
+
         req.on('end', () => {
             const data = JSON.parse(body);
             // you are meant to store this data somewhere
             // maybe a database??
             grocery_list.push(makeItem(data.name, data.price, data.quantity, data.purchased));
-            console.log(`name is ${data.name}`);
+            logger.info(`Item: "${data.name}" added with POST request`);
             res.writeHead(201, {'Content-Type': 'application/json'});
             res.end(JSON.stringify({message: 'Resource Created Successfully!'}));
         });
@@ -51,7 +67,7 @@ const server = http.createServer((req, res) => {
                     item.purchased = true;
                 }
             })
-            console.log(grocery_list);
+            logger.info(`Item: "${data.name}" purchased with PUT request`);
             res.writeHead(200, {'Content-Type': 'application/json'});
             res.end(JSON.stringify({message: 'Resource Changed Successfully!'}));
         });
@@ -68,12 +84,14 @@ const server = http.createServer((req, res) => {
                         delete grocery_list[index];
                     }
                 })
-                console.log(grocery_list);
+                logger.info(`Item: "${data.name}" deleted with DELETE request`);
                 res.writeHead(200, {'Content-Type': 'application/json'});
-                res.end(JSON.stringify({message: 'Resource Changed Successfully!'}));
+                res.end(JSON.stringify({message: 'Resource Deleted Successfully!'}));
             });
     }else{
         res.writeHead(404, {'Content-Type': 'text/plain'});
+        logger.error("Bad request");
+
         res.end('Not Found');
     }
 
