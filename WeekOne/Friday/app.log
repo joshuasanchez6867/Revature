@@ -1,0 +1,63 @@
+2023-09-15T19:30:34.072Z [info]: New Session
+2023-09-15T19:30:55.667Z [info]: New Session
+2023-09-15T19:31:36.728Z [info]: New Session
+2023-09-15T19:31:36.757Z [info]: Return all items for GET request}
+2023-09-15T19:56:04.792Z [info]: New Session
+2023-09-15T19:56:04.816Z [info]: Return all items for GET request}
+2023-09-15T19:57:26.285Z [info]: New Session
+2023-09-15T19:57:26.311Z [info]: Return all items for GET request}
+2023-09-15T20:10:01.469Z [info]: New Session
+2023-09-15T20:10:01.497Z [info]: Return all items for GET request}
+2023-09-15T20:10:42.103Z [info]: New Session
+2023-09-15T20:10:42.127Z [info]: Return all items for GET request}
+2023-09-15T20:11:16.561Z [info]: New Session
+2023-09-15T20:11:16.586Z [info]: Return all items for GET request}
+2023-09-15T20:11:16.590Z [info]: Item: "water" added with POST request
+2023-09-15T20:11:16.591Z [info]: Item: "water" added with POST request
+2023-09-15T20:11:16.602Z [info]: Item: "water" added with POST request
+2023-09-15T20:13:43.454Z [info]: New Session
+2023-09-15T20:13:43.478Z [info]: Return all items for GET request}
+2023-09-15T20:13:43.480Z [info]: Item: "water" added with POST request
+2023-09-15T20:13:43.482Z [info]: Item: "water" added with POST request
+2023-09-15T20:13:43.482Z [info]: Item: "water" deleted with DELETE request
+2023-09-15T20:13:43.484Z [info]: Item: "water" added with POST request
+2023-09-15T20:13:43.484Z [info]: Item: "water" purchased with PUT request
+2023-09-15T20:15:36.454Z [info]: New Session
+2023-09-15T20:15:36.480Z [info]: Return all items for GET request}
+2023-09-15T20:15:36.482Z [info]: Item: "water" added with POST request
+2023-09-15T20:15:36.483Z [info]: Item: "water" added with POST request
+2023-09-15T20:15:36.484Z [info]: Item: "water" deleted with DELETE request
+2023-09-15T20:15:36.485Z [info]: Item: "water" added with POST request
+2023-09-15T20:15:36.485Z [info]: Item: "water" purchased with PUT request
+2023-09-15T20:18:24.130Z [info]: New Session
+2023-09-15T20:18:24.158Z [info]: Return all items for GET request}
+2023-09-15T20:18:24.161Z [info]: Item: "water" added with POST request
+2023-09-15T20:18:24.163Z [info]: Item: "water" added with POST request
+2023-09-15T20:18:24.163Z [info]: Item: "water" deleted with DELETE request
+2023-09-15T20:18:24.165Z [info]: Item: "water" added with POST request
+2023-09-15T20:18:24.166Z [info]: Item: "water" purchased with PUT request
+2023-09-15T20:18:24.167Z [error]: Bad request
+2023-09-15T20:18:31.074Z [info]: New Session
+2023-09-15T20:18:31.099Z [info]: Return all items for GET request}
+2023-09-15T20:18:31.102Z [info]: Item: "water" added with POST request
+2023-09-15T20:18:31.104Z [info]: Item: "water" added with POST request
+2023-09-15T20:18:31.104Z [info]: Item: "water" deleted with DELETE request
+2023-09-15T20:18:31.106Z [info]: Item: "water" added with POST request
+2023-09-15T20:18:31.106Z [info]: Item: "water" purchased with PUT request
+2023-09-15T20:18:31.107Z [error]: Bad request
+2023-09-15T20:20:09.052Z [info]: New Session
+2023-09-15T20:20:09.077Z [info]: Return all items for GET request}
+2023-09-15T20:20:09.079Z [info]: Item: "water" added with POST request
+2023-09-15T20:20:09.080Z [info]: Item: "water" added with POST request
+2023-09-15T20:20:09.080Z [info]: Item: "water" deleted with DELETE request
+2023-09-15T20:20:09.081Z [info]: Item: "water" added with POST request
+2023-09-15T20:20:09.082Z [info]: Item: "water" purchased with PUT request
+2023-09-15T20:20:09.083Z [error]: Bad request
+2023-09-15T20:20:14.993Z [info]: New Session
+2023-09-15T20:20:15.019Z [info]: Return all items for GET request}
+2023-09-15T20:20:15.022Z [info]: Item: "water" added with POST request
+2023-09-15T20:20:15.024Z [info]: Item: "water" added with POST request
+2023-09-15T20:20:15.024Z [info]: Item: "water" deleted with DELETE request
+2023-09-15T20:20:15.025Z [info]: Item: "water" added with POST request
+2023-09-15T20:20:15.026Z [info]: Item: "water" purchased with PUT request
+2023-09-15T20:20:15.027Z [error]: Bad request
