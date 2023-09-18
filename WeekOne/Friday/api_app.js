@@ -80,7 +80,6 @@ const server = ((req, res) => {
         res.end = JSON.stringify({message:'Not Found'});
         return res;
     }
-
 })
 
 module.exports = server;
