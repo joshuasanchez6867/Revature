@@ -1,0 +1,74 @@
+.navbar {
+    display: flex;
+    justify-content: space-between; /*Align items horizontally */
+    align-items: center; 
+    background-color: #e0e693;
+    color: #333;
+    padding: 10px;
+    border-color: blue;
+    border-style: dotted;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-link {
+    color: #b93636;
+    font-weight: bold;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* stack items vertically */
+        text-align: center;
+    }
+    .nav-link {
+        margin-top: 10px;
+    }
+}
+body {
+    counter-reset: item; /* Set a counter named 'section', and its initial value is 0. */
+}
+div#groceryList {
+    border: 5px solid;
+    margin: auto;
+    margin-top: 200px;
+    width: 70%;
+    padding: 10px;
+}
+
+
+#grocerylistheader{
+    /*flex-direction: row; /* stack items vertically */
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.groceryItem::before{
+    counter-increment: item; 
+    content: "Item " counter(item);
+}
+ol#groceryList {
+    max-width: 100%;
+}
+.groceryItem {
+    display: flex ;
+    justify-content: space-between;
+    margin: 0;
+}
+div#addItem{
+    margin-top: 40px;
+    display: flex ;
+    justify-content: center
+}
+
